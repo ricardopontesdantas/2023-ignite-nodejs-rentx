@@ -2,7 +2,7 @@ interface ICreateUserDTO {
     name: string
     username: string
     email: string
-    pasword: string
+    password: string
     driver_license: string
 }
 
