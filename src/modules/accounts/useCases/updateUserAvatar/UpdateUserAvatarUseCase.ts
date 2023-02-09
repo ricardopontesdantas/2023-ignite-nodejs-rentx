@@ -7,7 +7,7 @@ interface IRequest {
 }
 
 @injectable()
-class UpdateUserAvatar {
+class UpdateUserAvatarUseCase {
     constructor(
         @inject('UsersRepository')
         private usersRepository: IUsersRepository
@@ -22,4 +22,4 @@ class UpdateUserAvatar {
     }
 }
 
-export {UpdateUserAvatar}
+export {UpdateUserAvatarUseCase}
