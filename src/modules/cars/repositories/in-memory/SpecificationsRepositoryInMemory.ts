@@ -4,13 +4,14 @@ import { ICreateSpecificationDTO, ISpecificationsRepository } from "../ISpecific
 class SpecificationsRepositoryInMemory implements ISpecificationsRepository {
     specifications: Specification[] = []
 
-    async create({ name, description }: ICreateSpecificationDTO): Promise<void> {
-        const specifications = new Specification()
-        Object.assign(specifications, {
+    async create({ name, description }: ICreateSpecificationDTO): Promise<Specification> {
+        const specification = new Specification()
+        Object.assign(specification, {
             name,
             description
         })
-        this.specifications.push(specifications)
+        this.specifications.push(specification)
+        return specification
     }
 
     async findByName(name: string): Promise<Specification> {
