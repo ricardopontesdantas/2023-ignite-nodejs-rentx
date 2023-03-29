@@ -3,7 +3,7 @@ import {MigrationInterface, QueryRunner, Table, TableForeignKey} from "typeorm";
 export class CreateSpecificationsCars1679755661142 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.createTable(new Table(
+        await queryRunner.createTable(
             new Table({
                 name: 'specifications_cars',
                 columns: [
@@ -22,7 +22,7 @@ export class CreateSpecificationsCars1679755661142 implements MigrationInterface
                     }
                 ]
             })
-        ))
+        )
 
         await queryRunner.createForeignKey(
             'specifications_cars',
