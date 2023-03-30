@@ -1,5 +1,7 @@
 node_modules
 tmp/*.*
 tmp/avatar/*
+tmp/cars/*
 !tmp/avatar/.gitkeep
+!tmp/cars/.gitkeep
 ormconfig.json
