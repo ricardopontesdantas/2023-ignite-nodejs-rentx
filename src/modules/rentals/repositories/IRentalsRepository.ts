@@ -5,6 +5,7 @@ interface IRentalsRepository {
     findOpenRentalByCar(car_id: string): Promise<Rental>
     findOpenRentalByUse(user_id: string): Promise<Rental>
     create(data: ICreateRentalDTO): Promise<Rental>
+    findById(id: string): Promise<Rental>
 }
 
 export { IRentalsRepository }
