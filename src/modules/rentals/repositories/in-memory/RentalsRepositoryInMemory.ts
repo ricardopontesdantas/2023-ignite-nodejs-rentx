@@ -9,7 +9,7 @@ class RentaslRepositoryInMemory implements IRentalsRepository {
         return this.rentals.find(rental => rental.car_id === car_id && !rental.end_date)
     }
 
-    async findOpenRentalByUse(user_id: string): Promise<Rental> {
+    async findOpenRentalByUser(user_id: string): Promise<Rental> {
         return this.rentals.find(rental => rental.user_id === user_id && !rental.end_date)
     }
 
@@ -26,6 +26,10 @@ class RentaslRepositoryInMemory implements IRentalsRepository {
         this.rentals.push(rental)
 
         return rental
+    }
+
+    findById(id: string): Promise<Rental> {
+        throw new Error("Method not implemented.");
     }
 }
 
