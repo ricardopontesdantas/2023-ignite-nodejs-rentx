@@ -28,8 +28,12 @@ class RentaslRepositoryInMemory implements IRentalsRepository {
         return rental
     }
 
-    findById(id: string): Promise<Rental> {
+    async findById(id: string): Promise<Rental> {
         throw new Error("Method not implemented.");
+    }
+
+    async findByUser(user_id: string): Promise<Rental[]> {
+        return this.rentals.filter(rental => rental.user_id === user_id)
     }
 }
 
