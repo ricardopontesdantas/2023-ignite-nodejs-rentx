@@ -204,7 +204,7 @@
                 "summary": "Upload images",
                 "description": "Upload images",
                 "security": [
-                    { "bearerAuth": []}
+                    { "bearerAuth": [] }
                 ],
                 "parameters": [
                     {
