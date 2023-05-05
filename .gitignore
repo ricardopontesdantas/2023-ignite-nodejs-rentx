@@ -6,3 +6,4 @@ tmp/cars/*
 !tmp/cars/.gitkeep
 ormconfig.json
 coverage
+.env
