@@ -7,3 +7,4 @@ tmp/cars/*
 ormconfig.json
 coverage
 .env
+dist
